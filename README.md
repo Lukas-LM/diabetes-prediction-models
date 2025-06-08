@@ -25,7 +25,6 @@ This repository contains implementations of several machine learning models to p
 - scikit-learn
 - pandas
 - numpy
-- matplotlib (optional, if visualization is added)
 
 Install dependencies with:
 
