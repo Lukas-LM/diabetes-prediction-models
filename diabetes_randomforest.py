@@ -25,8 +25,8 @@ def run_random_forest():
 
     #I fill every empty value with the mean of the other values
     df[cols_with_zeros] = df[cols_with_zeros].fillna(df.mean())
-    #to avoid scaling problems, I am scaling the features of X
-    X = StandardScaler().fit_transform(df.drop("Outcome", axis=1))
+    
+    X = df.drop("Outcome", axis=1)
     y = df["Outcome"].values
     #I split my dataset into 80% to train and 20% to test data
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
